@@ -46,5 +46,10 @@ group :development do
   # gem "spring"
 end
 
+# devise gem for handling user authentication
+gem "devise"
+
+# A faster JSON api serializer library
+gem "jsonapi-serializer"
 
 gem "active_model_serializers", "~> 0.10.13"
