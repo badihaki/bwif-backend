@@ -12,7 +12,7 @@ Rails.application.routes.draw do
   },
   controllers: {
     sessions: 'users/sessions',
-    registrations: 'user/registrations'
+    registrations: 'users/registrations'
   }
 
 end
