@@ -46,6 +46,7 @@ class Users::SessionsController < Devise::SessionsController
         status: 401,
         message: "Couldn't find an active session"
       }, status: :unauthorized
+    end
   end
 
 end
