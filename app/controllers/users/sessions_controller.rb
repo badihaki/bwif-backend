@@ -13,6 +13,8 @@ class Users::SessionsController < Devise::SessionsController
   def new
     if user_signed_in?
       render json: current_user, status: :ok
+    else
+      render json:{error_message: 'No logged in user'}, status: :unauthorized
     end
   end
 
