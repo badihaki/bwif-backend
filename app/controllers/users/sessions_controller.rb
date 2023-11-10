@@ -9,6 +9,12 @@ class Users::SessionsController < Devise::SessionsController
   # def new
   #   super
   # end
+  
+  def new
+    if user_signed_in?
+      render json: current_user, status: :ok
+    end
+  end
 
   # POST /resource/sign_in
   # def create
@@ -19,6 +25,10 @@ class Users::SessionsController < Devise::SessionsController
   # def destroy
   #   super
   # end
+  
+  def destroy
+    #
+  end
 
   # protected
 
