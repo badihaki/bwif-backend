@@ -29,7 +29,12 @@ class Users::SessionsController < Devise::SessionsController
   # end
   
   def destroy
-    #
+    if user_signed_in?
+      sign_out :current_user
+      render json: {message: 'logged out successfully', current_user: current_user}, status: :ok
+    else
+      render json: {message: "not logged in??"}, status: :not_found
+    end
   end
 
   # protected
